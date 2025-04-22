@@ -1,5 +1,5 @@
 async function loadStudents() {
-  const res = await fetch('student-data.json');
+  const res = await fetch('./student-data.json');
   const data = await res.json();
   const select = document.getElementById('studentSelect');
   const assignmentList = document.getElementById('assignmentList');
@@ -45,7 +45,7 @@ function createAssignmentInterface(data, select, assignmentList) {
   problemSelect.multiple = true;
   assignDiv.appendChild(problemSelect);
 
-  fetch('books/minna-no-nihongo-1.json')
+  fetch('./books/minna-no-nihongo-1.json')
     .then(res => res.json())
     .then(bookData => {
       const problems = Object.values(bookData.chapters).flatMap(ch => ch.problems);
@@ -92,7 +92,7 @@ function createAssignmentInterface(data, select, assignmentList) {
 }
 
 loadStudents = async function () {
-  const res = await fetch('student-data.json');
+  const res = await fetch('./student-data.json');
   const data = await res.json();
   const select = document.getElementById('studentSelect');
   const assignmentList = document.getElementById('assignmentList');
