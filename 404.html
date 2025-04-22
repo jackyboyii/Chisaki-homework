@@ -4,7 +4,9 @@
     <meta http-equiv="refresh" content="0; url=./index.html" />
     <script>
       const url = new URL(window.location.href);
-      if (!url.pathname.includes("index.html")) {
+
+      // Redirect only if path does NOT already begin with /Chisaki-homework/index.html
+      if (!url.pathname.startsWith("/Chisaki-homework/index.html")) {
         const cleanPath = url.pathname.replace(/^\/Chisaki-homework/, "");
         const redirectTo = `${window.location.origin}/Chisaki-homework/index.html${cleanPath}${url.search}`;
         window.location.replace(redirectTo.replace(/\/+/g, "/"));
