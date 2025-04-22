@@ -1,15 +1,20 @@
-const bookSelect = document.createElement('select');
 const studentSlug = window.location.hash.replace(/^#/, "") || "demo";
+const subHeading = document.getElementById('sub-heading');
+const isStudent = studentSlug !== "demo";
 
-bookSelect.innerHTML = `
-  <option value="minna-no-nihongo-1.json">Minna no Nihongo 1</option>
-  <option value="genki-1.json">Genki 1</option>
-`;
-bookSelect.onchange = loadQuiz;
-document.body.insertBefore(bookSelect, document.getElementById('quiz-container'));
+if (!isStudent) {
+  const bookSelect = document.createElement('select');
+  bookSelect.innerHTML = `
+    <option value="minna-no-nihongo-1.json">Minna no Nihongo 1</option>
+    <option value="genki-1.json">Genki 1</option>
+  `;
+  bookSelect.onchange = loadQuiz;
+  document.getElementById('controls').appendChild(bookSelect);
+  window.bookSelect = bookSelect; // expose globally for use in loadQuiz
+}
 
 async function loadQuiz() {
-  const bookFile = 'books/' + bookSelect.value;
+  const bookFile = 'books/' + (window.bookSelect ? window.bookSelect.value : 'minna-no-nihongo-1.json');
 
   const [studentData, bookData] = await Promise.all([
     fetch('student-data.json').then(res => res.json()),
@@ -18,12 +23,17 @@ async function loadQuiz() {
 
   const questionIds = studentData[studentSlug];
   const container = document.getElementById('questions');
+  container.innerHTML = "";
 
   const problems = Object.values(bookData.chapters).flatMap(ch => ch.problems);
   const selectedProblems = questionIds
     ? problems.filter(p => questionIds.includes(p.id))
     : problems;
 
+  subHeading.textContent = isStudent
+    ? `${studentSlug} Homework`
+    : window.bookSelect.options[window.bookSelect.selectedIndex].text;
+  
   selectedProblems.forEach(problem => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('problem');

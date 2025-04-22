@@ -1,3 +1,29 @@
 {
-  "anna-tanaka-8723": ["mnn1-18-p1", "mnn1-18-p2"]
+  "jack-hayes-001": {
+    "name": "Jack Hayes",
+    "assignments": {
+      "2024-04-22": {
+        "problems": ["mnn1-18-p1"],
+        "status": "assigned"
+      }
+    }
+  },
+  "grace-hayes-002": {
+    "name": "Grace Hayes",
+    "assignments": {
+      "2024-04-22": {
+        "problems": ["mnn1-18-p2"],
+        "status": "assigned"
+      }
+    }
+  },
+  "desmond-dog-003": {
+    "name": "Desmond Dog",
+    "assignments": {
+      "2024-04-22": {
+        "problems": ["mnn1-18-p1", "mnn1-18-p2"],
+        "status": "assigned"
+      }
+    }
+  }
 }
