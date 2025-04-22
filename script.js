@@ -1,6 +1,5 @@
 const bookSelect = document.createElement('select');
-const path = window.location.pathname;
-const studentSlug = path.substring(path.lastIndexOf('/') + 1);
+const studentSlug = window.location.hash.replace(/^#/, "") || "demo";
 
 bookSelect.innerHTML = `
   <option value="minna-no-nihongo-1.json">Minna no Nihongo 1</option>
