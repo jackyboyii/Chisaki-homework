@@ -3,10 +3,11 @@
   <head>
     <meta http-equiv="refresh" content="0; url=./index.html" />
     <script>
-      const path = window.location.href;
-      if (!path.includes("index.html")) {
-        const newUrl = window.location.origin + "/Chisaki-homework/index.html" + window.location.pathname.replace(/^\/Chisaki-homework/, "") + window.location.search;
-        window.location.replace(newUrl);
+      const url = new URL(window.location.href);
+      if (!url.pathname.includes("index.html")) {
+        const cleanPath = url.pathname.replace(/^\/Chisaki-homework/, "");
+        const redirectTo = `${window.location.origin}/Chisaki-homework/index.html${cleanPath}${url.search}`;
+        window.location.replace(redirectTo.replace(/\/+/g, "/"));
       }
     </script>
   </head>
