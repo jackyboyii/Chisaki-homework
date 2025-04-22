@@ -1,0 +1,45 @@
+{
+  "book": "Minna no Nihongo 1",
+  "chapters": {
+    "18": {
+      "problems": [
+        {
+          "id": "mnn1-18-p1",
+          "title": "Problem 1",
+          "example": "テニス → ミラーさんは テニスが できます。",
+          "image": "images/mnn1-18-p1.png",
+          "audio": "audio/mnn1-18-p1.mp3",
+          "questions": [
+            {
+              "number": "1",
+              "text": "運転 → ミラーさんは [[blank]] が できます。",
+              "answer": ["運転"]
+            },
+            {
+              "number": "2",
+              "text": "料理 → ミラーさんは [[blank]] が できます。",
+              "answer": ["料理"]
+            }
+          ]
+        },
+        {
+          "id": "mnn1-18-p2",
+          "title": "Problem 2",
+          "example": "ひらがな を 書く ことが できますか。\n……はい、できます。",
+          "questions": [
+            {
+              "number": "1",
+              "text": "ひらがな を 書く ことが できますか。\n……[[blank]]、できます。",
+              "answer": ["はい"]
+            },
+            {
+              "number": "2",
+              "text": "漢字 を 読む ことが できますか。\n……[[blank]]、できません。",
+              "answer": ["いいえ"]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
