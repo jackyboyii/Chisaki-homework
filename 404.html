@@ -3,13 +3,13 @@
   <head>
     <meta http-equiv="refresh" content="0; url=./index.html" />
     <script>
-      const url = new URL(window.location.href);
+      const current = new URL(window.location.href);
 
-      // Redirect only if path does NOT already begin with /Chisaki-homework/index.html
-      if (!url.pathname.startsWith("/Chisaki-homework/index.html")) {
-        const cleanPath = url.pathname.replace(/^\/Chisaki-homework/, "");
-        const redirectTo = `${window.location.origin}/Chisaki-homework/index.html${cleanPath}${url.search}`;
-        window.location.replace(redirectTo.replace(/\/+/g, "/"));
+      // Only redirect if we're not already on index.html with content after it
+      if (!current.pathname.startsWith("/Chisaki-homework/index.html")) {
+        const slug = current.pathname.split("/Chisaki-homework/")[1] || "";
+        const destination = `${window.location.origin}/Chisaki-homework/index.html/${slug}${current.search}`;
+        window.location.replace(destination.replace(/\/+/g, "/"));
       }
     </script>
   </head>
