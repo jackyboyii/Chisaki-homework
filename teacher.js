@@ -1,30 +1,36 @@
 async function loadStudents() {
   const res = await fetch('./student-data.json');
   const data = await res.json();
-  const select = document.getElementById('studentSelect');
-  const assignmentList = document.getElementById('assignmentList');
 
-  // Populate dropdown
+  const studentContainer = document.getElementById('studentSelect');
+  const assignmentList = document.getElementById('assignmentList');
+  studentContainer.innerHTML = ''; // Clear old dropdown if any
+
+  const studentList = document.createElement('ul');
+  studentList.id = 'studentList';
+  studentContainer.appendChild(studentList);
+
   Object.entries(data).forEach(([id, info]) => {
-    const option = document.createElement('option');
-    option.value = id;
-    option.textContent = info.name;
-    select.appendChild(option);
+    const li = document.createElement('li');
+    li.textContent = info.name;
+    li.style.cursor = 'pointer';
+    li.onclick = () => {
+      displayAssignments(id, data, assignmentList);
+    };
+    studentList.appendChild(li);
   });
 
-  // Update display on change
-  select.onchange = () => {
-    const student = data[select.value];
-    assignmentList.innerHTML = '';
-    Object.entries(student.assignments).forEach(([key, assignment]) => {
-      const li = document.createElement('li');
-      li.textContent = `${key} – ${assignment.problems.join(', ')} (${assignment.status})`;
-      assignmentList.appendChild(li);
-    });
-  };
+  createAssignmentInterface(data, studentContainer, assignmentList);
+}
 
-  // Trigger initial load
-  select.dispatchEvent(new Event('change'));
+function displayAssignments(studentId, data, assignmentList) {
+  const student = data[studentId];
+  assignmentList.innerHTML = '';
+  Object.entries(student.assignments).forEach(([key, assignment]) => {
+    const li = document.createElement('li');
+    li.textContent = `${key} – ${assignment.problems.join(', ')} (${assignment.status})`;
+    assignmentList.appendChild(li);
+  });
 }
 
 function createAssignmentInterface(data, select, assignmentList) {
@@ -62,7 +68,14 @@ function createAssignmentInterface(data, select, assignmentList) {
   assignButton.style.display = 'block';
   assignButton.style.marginTop = '1rem';
   assignButton.onclick = () => {
-    const studentId = select.value;
+    const studentList = document.getElementById('studentList');
+    const selectedStudentLi = Array.from(studentList.children).find(li => li.style.fontWeight === 'bold');
+    if (!selectedStudentLi) {
+      alert('Please select a student.');
+      return;
+    }
+    const studentName = selectedStudentLi.textContent;
+    const studentId = Object.entries(data).find(([id, info]) => info.name === studentName)[0];
     const label = labelInput.value.trim();
     const selectedProblems = Array.from(problemSelect.selectedOptions).map(opt => opt.value);
 
@@ -82,7 +95,7 @@ function createAssignmentInterface(data, select, assignmentList) {
     console.log('Updated student data:', data);
 
     // Refresh display
-    select.dispatchEvent(new Event('change'));
+    displayAssignments(studentId, data, assignmentList);
     labelInput.value = '';
     problemSelect.selectedIndex = -1;
   };
@@ -90,30 +103,3 @@ function createAssignmentInterface(data, select, assignmentList) {
   assignDiv.appendChild(assignButton);
   document.body.appendChild(assignDiv);
 }
-
-loadStudents = async function () {
-  const res = await fetch('./student-data.json');
-  const data = await res.json();
-  const select = document.getElementById('studentSelect');
-  const assignmentList = document.getElementById('assignmentList');
-
-  Object.entries(data).forEach(([id, info]) => {
-    const option = document.createElement('option');
-    option.value = id;
-    option.textContent = info.name;
-    select.appendChild(option);
-  });
-
-  select.onchange = () => {
-    const student = data[select.value];
-    assignmentList.innerHTML = '';
-    Object.entries(student.assignments).forEach(([key, assignment]) => {
-      const li = document.createElement('li');
-      li.textContent = `${key} – ${assignment.problems.join(', ')} (${assignment.status})`;
-      assignmentList.appendChild(li);
-    });
-  };
-
-  select.dispatchEvent(new Event('change'));
-  createAssignmentInterface(data, select, assignmentList);
-};

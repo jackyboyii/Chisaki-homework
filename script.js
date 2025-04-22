@@ -17,8 +17,8 @@ async function loadQuiz() {
   const bookFile = 'books/' + (window.bookSelect ? window.bookSelect.value : 'minna-no-nihongo-1.json');
 
   const [studentData, bookData] = await Promise.all([
-    fetch('student-data.json').then(res => res.json()),
-    fetch(bookFile).then(res => res.json())
+    fetch('./student-data.json').then(res => res.json()),
+    fetch('./' + bookFile).then(res => res.json())
   ]);
 
   const questionIds = studentData[studentSlug];
