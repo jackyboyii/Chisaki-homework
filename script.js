@@ -10,8 +10,6 @@ bookSelect.onchange = loadQuiz;
 document.body.insertBefore(bookSelect, document.getElementById('quiz-container'));
 
 async function loadQuiz() {
-  const urlParts = window.location.pathname.split('/');
-  const studentSlug = urlParts[urlParts.length - 1] || 'demo';
   const bookFile = 'books/' + bookSelect.value;
 
   const [studentData, bookData] = await Promise.all([
