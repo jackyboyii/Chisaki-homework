@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>View Questions by Book</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Chisaki Sensei – View Book Questions</h1>
+  <nav>
+    <a href="questions.html">View Questions</a> |
+    <a href="assign.html">Assign Homework</a>
+  </nav>
+
+  <div>
+    <label for="bookSelect">Select Book:</label>
+    <select id="bookSelect">
+      <option value="books/minna-no-nihongo-1.json">Minna no Nihongo 1</option>
+      <option value="books/genki-1.json">Genki 1</option>
+    </select>
+  </div>
+
+  <div id="questionList"></div>
+
+  <script src="questions.js"></script>
+</body>
+</html>

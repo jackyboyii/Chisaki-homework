@@ -13,3 +13,38 @@ input {
 .question {
   margin-bottom: 1.5rem;
 }
+
+.assignment-tile {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+}
+
+.assignment-tile h2 {
+  margin-top: 0;
+}
+
+.assignment-tile button {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: #0056b3;
+}

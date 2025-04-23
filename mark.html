@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mark Homework</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Chisaki Sensei – Mark Homework</h1>
+  <nav>
+    <a href="questions.html">View Questions</a> |
+    <a href="assign.html">Assign Homework</a>
+  </nav>
+
+  <div id="markingInfo">
+    <p><strong>Student:</strong> <span id="studentName"></span></p>
+    <p><strong>Assignment:</strong> <span id="assignmentName"></span></p>
+  </div>
+
+  <div id="questionReviewList">
+    <!-- Questions and answers will go here -->
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <label for="overallFeedback">Overall Feedback:</label><br />
+    <textarea id="overallFeedback" rows="5" style="width: 100%;"></textarea>
+  </div>
+
+  <script src="mark.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+
+
+{
+  "book": "Genki 1",
+  "chapters": {
+    "1": {
+      "problems": [
+        {
+          "id": "genki1-1-p1",
+          "title": "Self-introduction",
+          "example": "わたしは [[blank]] です。",
+          "questions": [
+            {
+              "number": "1",
+              "text": "わたしは [[blank]] です。",
+              "answer": "がくせい"
+            },
+            {
+              "number": "2",
+              "text": "わたしのなまえは [[blank]] です。",
+              "answer": "たなか"
+            }
+          ]
+        },
+        {
+          "id": "genki1-1-p2",
+          "title": "Basic sentence structure",
+          "questions": [
+            {
+              "number": "1",
+              "text": "これは [[blank]] です。",
+              "answer": "ほん"
+            },
+            {
+              "number": "2",
+              "text": "それは [[blank]] です。",
+              "answer": "じしょ"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "problems": [
+        {
+          "id": "genki1-2-p1",
+          "title": "Question words",
+          "example": "これは [[blank]] ですか。",
+          "questions": [
+            {
+              "number": "1",
+              "text": "[[blank]] は なん ですか。",
+              "answer": "これは"
+            },
+            {
+              "number": "2",
+              "text": "あなたの なまえ は [[blank]] ですか。",
+              "answer": "なん"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "problems": [
+        {
+          "id": "genki1-3-p1",
+          "title": "Verb conjugation (present tense)",
+          "example": "たけしさん は まいにち コーヒー を [[blank]]。",
+          "questions": [
+            {
+              "number": "1",
+              "text": "わたし は にほんご を [[blank]]。",
+              "answer": "べんきょうします"
+            },
+            {
+              "number": "2",
+              "text": "メアリーさん は よく テレビ を [[blank]]。",
+              "answer": "みます"
+            }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "problems": [
+        {
+          "id": "genki1-4-p1",
+          "title": "Location words",
+          "questions": [
+            {
+              "number": "1",
+              "text": "いぬ は テーブル の [[blank]] に います。",
+              "answer": "した"
+            },
+            {
+              "number": "2",
+              "text": "ほん は つくえ の [[blank]] です。",
+              "answer": "うえ"
+            }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "problems": [
+        {
+          "id": "genki1-5-p1",
+          "title": "Describing people/things",
+          "example": "たなかさん は [[blank]] です。",
+          "questions": [
+            {
+              "number": "1",
+              "text": "この ほん は [[blank]] です。",
+              "answer": "おもしろい"
+            },
+            {
+              "number": "2",
+              "text": "あの ひと は [[blank]] です。",
+              "answer": "しんせつ"
+            }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "problems": [
+        {
+          "id": "genki1-6-p1",
+          "title": "Te-form introduction",
+          "questions": [
+            {
+              "number": "1",
+              "text": "ドア を [[blank]] ください。",
+              "answer": "あけて"
+            },
+            {
+              "number": "2",
+              "text": "エアコン を [[blank]] ください。",
+              "answer": "けして"
+            }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "problems": [
+        {
+          "id": "genki1-7-p1",
+          "title": "Describing activities",
+          "questions": [
+            {
+              "number": "1",
+              "text": "おとうと は にほんご を [[blank]]。",
+              "answer": "べんきょうしています"
+            },
+            {
+              "number": "2",
+              "text": "いもうと は いま テレビ を [[blank]]。",
+              "answer": "みています"
+            }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "problems": [
+        {
+          "id": "genki1-8-p1",
+          "title": "Using 〜たい",
+          "questions": [
+            {
+              "number": "1",
+              "text": "わたし は すし を [[blank]]。",
+              "answer": "たべたいです"
+            },
+            {
+              "number": "2",
+              "text": "メアリーさん は にほん に [[blank]]。",
+              "answer": "いきたいです"
+            }
+          ]
+        }
+      ]
+    },
+    "9": {
+      "problems": [
+        {
+          "id": "genki1-9-p1",
+          "title": "Past tense verbs",
+          "questions": [
+            {
+              "number": "1",
+              "text": "きのう、テレビ を [[blank]]。",
+              "answer": "みました"
+            },
+            {
+              "number": "2",
+              "text": "たけしさん は ごはん を [[blank]]。",
+              "answer": "たべました"
+            }
+          ]
+        }
+      ]
+    },
+    "10": {
+      "problems": [
+        {
+          "id": "genki1-10-p1",
+          "title": "Comparisons",
+          "questions": [
+            {
+              "number": "1",
+              "text": "りんご は みかん より [[blank]] です。",
+              "answer": "おおきい"
+            },
+            {
+              "number": "2",
+              "text": "あの ひと は この ひと より [[blank]] です。",
+              "answer": "ゆうめい"
+            }
+          ]
+        }
+      ]
+    },
+    "11": {
+      "problems": [
+        {
+          "id": "genki1-11-p1",
+          "title": "Volitional form",
+          "questions": [
+            {
+              "number": "1",
+              "text": "いっしょに [[blank]]。",
+              "answer": "いきましょう"
+            },
+            {
+              "number": "2",
+              "text": "きょう、テニス を [[blank]]。",
+              "answer": "しましょう"
+            }
+          ]
+        }
+      ]
+    },
+    "12": {
+      "problems": [
+        {
+          "id": "genki1-12-p1",
+          "title": "〜んです explanation",
+          "questions": [
+            {
+              "number": "1",
+              "text": "おなか が [[blank]] んです。",
+              "answer": "いたい"
+            },
+            {
+              "number": "2",
+              "text": "ねつ が [[blank]] んです。",
+              "answer": "ある"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

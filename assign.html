@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assign Homework</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #problemSelectorContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .problem-option {
+      display: grid;
+      grid-template-columns: 1.5rem auto;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-option input[type="checkbox"] {
+      margin: 0;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chisaki Sensei – Assign Homework</h1>
+  <nav>
+    <a href="questions.html">View Questions</a> |
+    <a href="assign.html">Assign Homework</a>
+  </nav>
+
+  <div>
+    <label for="studentDropdown">Select Student:</label>
+    <select id="studentDropdown">
+      <option value="">-- Choose a student --</option>
+    </select>
+  </div>
+
+  <div id="assignments">
+    <h2>Assignments</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Due Date</th>
+          <th>Problems</th>
+          <th>Completed</th>
+          <th>Marked</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="assignmentList">
+        <!-- Populated dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="homeworkBuilder" style="margin-top: 2rem;">
+    <h2>Create New Homework</h2>
+    <label for="bookSelector">Select Book:</label>
+    <select id="bookSelector">
+      <option value="books/minna-no-nihongo-1.json">Minna no Nihongo 1</option>
+      <option value="books/genki-1.json">Genki 1</option>
+    </select>
+
+    <div style="display: flex; margin-top: 1rem; gap: 2rem;">
+      <div id="problemSelectorContainer" style="flex: 1;">
+      </div>
+      <div style="flex: 1;">
+        <h3>Selected Problems</h3>
+        <ul id="selectedProblemList"></ul>
+      </div>
+    </div>
+
+    <div style="margin-top: 1rem;">
+      <label for="assignmentLabel">Assignment Label:</label>
+      <input type="text" id="assignmentLabel" placeholder="e.g., 2024-05-05" />
+      <label for="assignmentDueDate" style="margin-left:1rem;">Due Date:</label>
+      <input type="date" id="assignmentDueDate" />
+    </div>
+
+    <button id="assignButton" style="margin-top: 1rem;">Assign Homework</button>
+  </div>
+
+  <script src="assign.js"></script>
+</body>
+</html>

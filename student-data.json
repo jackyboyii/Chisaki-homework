@@ -4,7 +4,9 @@
     "assignments": {
       "2024-04-22": {
         "problems": ["mnn1-18-p1"],
-        "status": "assigned"
+        "dueDate": "2024-04-29",
+        "completed": false,
+        "marked": false
       }
     }
   },
@@ -13,7 +15,9 @@
     "assignments": {
       "2024-04-22": {
         "problems": ["mnn1-18-p2"],
-        "status": "assigned"
+        "dueDate": "2024-04-29",
+        "completed": false,
+        "marked": false
       }
     }
   },
@@ -22,7 +26,9 @@
     "assignments": {
       "2024-04-22": {
         "problems": ["mnn1-18-p1", "mnn1-18-p2"],
-        "status": "assigned"
+        "dueDate": "2024-04-29",
+        "completed": false,
+        "marked": false
       }
     }
   }
